@@ -1,0 +1,248 @@
+
+body{
+    padding:50px;
+    background-color:cadetblue;
+}
+h3::after{
+    content:'';
+    display:block;
+    margin:20px 0px;
+}
+h2::before{
+    content:'';
+    display:block;
+    margin:80px 0px;
+}
+/*stylizowanie checkbox*/
+
+.box input[type="checkbox"]{
+    display: none;
+}
+.box input[type="checkbox"] + label:before{
+    content: "\2714";
+    border:0.1em solid #000;
+    border-radius:0.2em;
+    display: inline-block;
+    width:1em;
+    height:1em;
+    padding-left:0.2em;
+    padding-bottom:0.3em;
+    margin-right: 0.2em;
+    color:transparent;
+    -webkit-transition:1s;
+    -webkit-transition:1s;
+    transition:1s;
+}
+.box input[type="checkbox"]:checked + label:before{
+    background-color: #1e4848;
+    color:#fff;
+}
+/*inna propozycja*/
+input[type="checkbox"]{
+    display: none;
+}
+.checkbox:not(checked) + label{
+    
+    position:relative;
+  
+}
+.checkbox:not(checked) + label:before{
+content:'';
+position:absolute;
+left:-30px;
+width: 100px;
+height:40px;
+border-radius: 25px;
+background:grey;
+-webkit-transition:2s;
+transition:2s;
+}
+.checkbox:not(checked) + label:after{
+    content:'';
+    position: absolute;
+    top:-6px;
+    left:-30px;
+    width:47px;
+    height:50px;
+    border-radius:50%;
+    -webkit-transition:all 2s;
+    transition:all 2s;
+    background-color:black;
+     -webkit-box-shadow: 0 0 75px #fff;
+    box-shadow: 0 0 15px #fff;
+}
+.checkbox:checked + label:after{
+    content:'';
+    position: absolute;
+    left:-30px;
+    -webkit-transform:translateX(53px);
+    transform:translateX(53px);
+    -webkit-transition:all 2s;
+    transition:all 2s;
+    background:blue;
+   background-color:#fff;
+    -webkit-box-shadow: 0 0 75px #000;
+    box-shadow: 0 0 15px #000;
+}
+/*stylizowanie checkbox propozycja druga*/
+.checkbox{
+    display: inline-block;
+    width:30px;
+    height:30px;
+    font-weight:bold;
+    position: relative;
+}
+.jezykc p.c{
+    display: inline-block;
+    position: absolute;
+    top:9px;
+    left:40px;
+    margin:0 auto;
+}
+.jezykc{
+    display: inline-block;
+    width:30px;
+    height:30px;
+    background-color:#ddd;
+    position: relative;
+}
+.jezykc input[type="checkbox"]{
+    display: none;
+}
+.jezykc label{
+    width:28px;
+    height:28px;
+    background-color:#57bba7;
+    position: absolute;
+    top:1px;
+    left:1px;
+    margin:0 auto;
+}
+.jezykc label::before{
+    content:'';
+    width:9px;
+    height:5px;
+    position:absolute;
+    border:3px solid #fff;
+    border-top:transparent;
+    border-right:transparent;
+    -webkit-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+    top:8px;
+    left:8px;
+    opacity:0;
+}
+.jezykc input[type="checkbox"]:checked + label::before{
+    opacity:1;
+}
+.jezykjava p.java{
+    display: inline-block;
+    position: absolute;
+    top:8px;
+    left:40px;
+    margin:0 auto;
+}
+.jezykjava{
+    display: inline-block;
+    width:30px;
+    height:30px;
+    background-color:#ddd;
+    position: relative;
+}
+.jezykjava input[type="checkbox"]{
+    display: none;
+}
+.jezykjava label{
+    width:28px;
+    height:28px;
+    background-color:#57bba7;
+    position: absolute;
+    top:1px;
+    left:1px;
+    margin:0 auto;
+}
+.jezykjava label::before{
+    content:'';
+    width:9px;
+    height:5px;
+    position:absolute;
+    border:3px solid #fff;
+    border-top:transparent;
+    border-right:transparent;
+    -webkit-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+    top:8px;
+    left:8px;
+    opacity:0;
+}
+.jezykjava input[type="checkbox"]:checked + label::before{
+    opacity:1;
+}
+/* stylizowanie button*/
+button {
+    width:100px;
+    height:40px;
+    border:1px solid #fff;
+    background-color:#4f987f;
+    color:rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+}
+button:before{
+    content:'click me!';
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+}
+button:hover{
+   background-color:#bcb8b8;
+    cursor:pointer;  
+}
+button:hover:before{
+
+    position:absolute;
+    top:-30px;
+    display:none;
+}
+button:hover:after{
+    content:'▲';
+    top:20px;
+    color:red;
+}
+/*stylizowanie inputów typu submit*/
+.przycisk{
+    display:inline-block;
+    position:relative;
+}
+.przycisk1{
+    display:inline-block;
+    position:relative;
+}
+.przycisk input[type="submit"]{
+    width:120px;
+    height:40px;
+    color:#fff;
+    font-size:20px;
+    background-color:#000;
+    border:1px solid #fff;
+    position:absolute;
+    top:0;
+    left:0;
+    -webkit-transition:all 1s ease;
+    transition:all 1s ease;
+    margin-top:-20px;
+    border-radius:5px;
+    -webkit-box-shadow: 0 0 2 rgba(0,0,0,0.5);
+    box-shadow: 0 0 2 rgba(0,0,0,0.5);
+    cursor:pointer;
+    font-weight:bold;
+}
+input[type="submit"]:hover{
+    background-color:#fff;
+    color:#000;
+}
